@@ -26,8 +26,8 @@
     Write-Host "Copying FileZilla Server.xml to install directory"
     Copy-Item "$($toolsDir)\FileZilla Server.xml" "$fileZillaInstallDir" -Force
   }
-
-  Install-ChocolateyPackage 'filezilla.server' 'exe' '/S' "https://downloads.sourceforge.net/project/filezilla/FileZilla%20Server/{{PackageVersion}}/FileZilla_Server-$version.exe"
+    #moved to https://dl4.cdn.filezilla-project.org/server/FileZilla_Server-0_9_60_2.exe?h=Zox8x5Pt7bz2Pcyuy1KXmA&x=1545186963
+    Install-ChocolateyPackage 'filezilla.server' 'exe' '/S' "https://dl4.cdn.filezilla-project.org/server/FileZilla_Server-$version.exe?h=Zox8x5Pt7bz2Pcyuy1KXmA&x=1545186963"
 
   Write-ChocolateySuccess 'filezilla.server'
 } catch {
